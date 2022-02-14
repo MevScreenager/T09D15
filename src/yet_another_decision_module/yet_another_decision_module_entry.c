@@ -23,12 +23,14 @@ int main() {
 
     if (!input(data, &n)) {
         printf("n/a");
+        free(data);
         return 0;
     }
 
     if (make_decision(data, n))
-        printf("YES"); 
+        printf("YES");
     else
-        printf("NO");  
+        printf("NO");
+    free(data);
     return 0;
 }

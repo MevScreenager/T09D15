@@ -1,4 +1,6 @@
 #include "data_executable.h"
+#ifndef DATA_EXECUTABLE_C
+#define DATA_EXECUTABLE_C
 
 void quick_sort(double *data, int first, int last) {
     if (first < last) {
@@ -19,4 +21,15 @@ void quick_sort(double *data, int first, int last) {
     }
 }
 
-void make_decision(double *data, int n) {}
+void sort(double *data, int n) {
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n - 1; j++) {
+            if (data[i] > data[j + 1]) {
+                double time = data[i];
+                data[i] = data[j + 1];
+                data[j + 1] = time;
+            }
+        }
+}
+
+#endif  // DATA_EXECUTABLE_C

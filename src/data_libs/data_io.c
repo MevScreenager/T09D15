@@ -1,8 +1,9 @@
 #include "data_io.h"
+#include<stdio.h>
+#ifndef DATA_IO_C
+#define DATA_IO_C
 
 int input(double *data, int *n) {
-
-    // data = malloc(*n * sizeof(double));
     for (int i = 0; i < *n; i++) {
         char c;
         if (scanf("%lf%c", &data[i], &c) != 2) return 0;
@@ -13,6 +14,13 @@ int input(double *data, int *n) {
 }
 
 void output(double *data, int n) {
-    for (int i = 0; i < n; i++)
-        printf("%.2lf", data[i]);
+    for (int i = 0; i < n; i++) {
+        if (i == n - 1) {
+            printf("%0.2lf", data[i]);
+            return;
+        }
+        printf("%0.2lf ", data[i]);
+    }
 }
+
+#endif  // DATA_IO_C

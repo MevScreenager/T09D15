@@ -3,9 +3,10 @@
 #include<math.h>
 
 #include "../data_libs/data_stat.c"
+#ifndef DECISION_C
+#define DECISION_C
 
-int make_decision(double *data, int n)
-{
+int make_decision(double *data, int n) {
     int decision = 1;
 
     double m = mean(data, n);
@@ -19,3 +20,5 @@ int make_decision(double *data, int n)
 
     return decision;
 }
+
+#endif  // DECISION_C

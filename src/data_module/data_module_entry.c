@@ -23,6 +23,7 @@ int main() {
 
     if (!input(data, &n)) {
         printf("n/a");
+        free(data);
         return 0;
     }
     if (normalization(data, n))

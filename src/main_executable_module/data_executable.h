@@ -1,7 +1,7 @@
-#ifndef PROCESSING_H
-#define PROCESSING_H
+#ifndef SRC_MAIN_EXECUTABLE_MODULE_DATA_EXECUTABLE_H_
+#define SRC_MAIN_EXECUTABLE_MODULE_DATA_EXECUTABLE_H_
 
 void quick_sort(double *data, int first, int last);
-void make_decision(double *data, int n);
+void sort(double *data, int n);
 
-#endif
+#endif  // SRC_MAIN_EXECUTABLE_MODULE_DATA_EXECUTABLE_H_

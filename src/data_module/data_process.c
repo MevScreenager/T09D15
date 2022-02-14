@@ -3,6 +3,8 @@
 #include <math.h>
 
 #include "../data_libs/data_stat.c"
+#ifndef DATA_PROGRESS_C
+#define DATA_PROGRESS_C
 
 int normalization(double *data, int n) {
     int result = 1;
@@ -18,3 +20,5 @@ int normalization(double *data, int n) {
     }
     return result;
 }
+
+#endif  // DATA_PROGRESS_C
