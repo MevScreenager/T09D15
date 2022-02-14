@@ -11,8 +11,14 @@ int main() {
     int n;
     char c1;
 
-    if (scanf("%d%c", &n, &c1) != 2) return 0;
-    if ((int) c1 != 10) return 0;
+    if (scanf("%d%c", &n, &c1) != 2) {
+        printf("n/a");
+        return 0;
+    }
+    if ((int) c1 != 10) {
+        printf("n/a");
+        return 0;
+    }
     data = malloc(n * sizeof(double));
 
     if (!input(data, &n)) {

@@ -2,6 +2,8 @@
 #include "../data_libs/data_stat.h"
 #include<math.h>
 
+#include "../data_libs/data_stat.c"
+
 int make_decision(double *data, int n)
 {
     int decision = 1;
@@ -9,7 +11,7 @@ int make_decision(double *data, int n)
     double m = mean(data, n);
     double sigma = sqrt(variance(data, n));
     double max_value = max(data, n);
-    double min_value = min(data, n);
+    // double min_value = min(data, n);
 
     decision &= (max_value <= m + 3*sigma) &&
                 (max_value >= m - 3*sigma) &&
