@@ -1,4 +1,6 @@
 #include "data_process.h"
+#include "../data_libs/data_io.h"
+#include "../data_libs/data_stat.h"
 #include<stdlib.h>
 
 void main()
