@@ -1,23 +1,28 @@
 #include "data_process.h"
 #include "../data_libs/data_io.h"
 #include<stdlib.h>
+#include<stdio.h>
 
-void main()
-{
-    double *data;
+#include "../data_libs/data_io.c"
+#include "data_process.c"
+
+int main() {
+    double *data = NULL;
     int n;
-    
-    //Don`t forget to allocate memory !
+    char c1;
+
+    if (scanf("%d%c", &n, &c1) != 2) return 0;
+    if ((int) c1 != 10) return 0;
+    data = malloc(n * sizeof(double));
 
     if (!input(data, &n)) {
         printf("n/a");
-        return;
+        return 0;
     }
-    data = malloc(n * sizeof(double));
     if (normalization(data, n))
         output(data, n);
     else
         printf("ERROR");
     free(data);
-    return;
+    return 0;
 }
