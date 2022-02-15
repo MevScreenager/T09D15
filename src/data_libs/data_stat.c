@@ -1,4 +1,5 @@
 #include "data_stat.h"
+#include <math.h>
 #ifndef DATA_STAT_C
 #define DATA_STAT_C
 double max(double *data, int n) {

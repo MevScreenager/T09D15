@@ -16,6 +16,27 @@ main_executable_module.o: main_executable_module/main_executable_module.c data_l
 clean:
 	rm -rf *.o main
 
+# .PHONY: all clean
+
+# CC = gcc
+# CFLAGS = -c -Wall -Werror -Wextra -std=c11
+
+# rebuild: clean all
+
+# all: ../build/Quest_5
+
+# ../build/Quest_5:  build_with_static.o
+# 	$(CC) build_with_static.o -o ../build/Quest_5
+
+# build_with_static.o: main_executable_module/main_executable_module.c data_stat.a
+# 	$(CC) $(CFLAGS) -c main_executable_module/main_executable_module.c -o build_with_static.o
+
+# data_stat.a: data_libs/data_stat.c data_libs/data_stat.h
+# 	$(CC) $(CFLAGS) -c data_libs/data_stat.c
+
+# clean:
+# 	rm -rf *.o main
+
 # Quest_3: main_executable_module.o data_executable.o data_io.o data_process.o decision.o
 # 	$(CC) main_executable_module.o data_executable.o data_io.o data_process.o decision.o -o Quest_3
 

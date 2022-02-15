@@ -19,6 +19,10 @@ int main() {
         printf("n/a");
         return 0;
     }
+    if ((int) n != n || n < 1) {
+        printf("n/a");
+        return 0;
+    }
     if ((int) c1 != 10) {
         printf("n/a");
         return 0;
